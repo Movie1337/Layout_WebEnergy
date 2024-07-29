@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Webenergy-test-task</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__top">
+          <div class="header__left">
+            <div class="header__logo">
+              <img src="image/logo.png" alt="Сириус" />
+            </div>
+            <div class="header__location">
+              <span>Выберите ваш город:</span>
+              <div class="header__city-wrapper">
+                <img src="image/map-pin.png" alt="Значок локации" /><a
+                  href="#"
+                  class="header__city"
+                  >Санкт-Петербург</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Поиск"
+              class="header__search-input"
+            />
+          </div>
+          <div class="header__timestamp">
+            Режим работы<br />
+            Пн-Пт с 8:00 — 18:00
+          </div>
+          <div class="header__socials">
+            <a href="#" class="header__social-link">
+              <img src="image/facebook-icon.png" alt="Facebook" />
+            </a>
+            <a href="#" class="header__social-link">
+              <img src="image/instagram-icon.png" alt="Instagram" />
+            </a>
+            <a href="#" class="header__social-link">
+              <img src="image/vk-icon.png" alt="VK" />
+            </a>
+          </div>
+          <div class="header__contacts">
+            <div class="header__contact">
+              <div class="header__city">г. Москва</div>
+              <a href="tel:+74957772345" class="header__phone"
+                >+7 (495) 777-2345</a
+              >
+              <a href="#" class="header__callback">Заказать звонок</a>
+            </div>
+            <div class="header__contact">
+              <div class="header__city">г. Ногинск</div>
+              <a href="tel:+74956004400" class="header__phone"
+                >+7 (495) 600-4400</a
+              >
+              <a href="#" class="header__callback">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li class="header__menu-button">
+                <img src="image/menu-icon.png" alt="Каталог" />
+                Каталог
+              </li>
+              <li class="header__menu-item"><a href="#">Новости</a></li>
+              <li class="header__menu-item"><a href="#">О компании</a></li>
+              <li class="header__menu-item"><a href="#">Скидки</a></li>
+              <li class="header__menu-item">
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li class="header__menu-item"><a href="#">Услуги</a></li>
+              <li class="header__menu-item"><a href="#">Дилеры</a></li>
+              <li class="header__menu-item"><a href="#">Магазины</a></li>
+              <li class="header__menu-item"><a href="#">Контакты</a></li>
+              <li class="header__menu-item"><a href="#">Честный знак</a></li>
+            </ul>
+          </nav>
+          <div class="header__actions">
+            <div class="header__cart">
+              <img
+                class="header__cart-icon"
+                src="image/basket-icon.png"
+                alt="Корзина"
+              />
+              <span>0</span>
+            </div>
+            <div class="header__login">
+              <img src="image/user-icon.png" alt="Иконка пользователя" />
+              <a href="#">Войти</a>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumbs">
+          <a href="#" class="breadcrumbs__link">Каталог товаров</a>
+          <span class="breadcrumbs__separator">></span>
+          <a href="#" class="breadcrumbs__link">Спецодежда</a>
+          <span class="breadcrumbs__separator">></span>
+          <span class="breadcrumbs__current">Спецодежда зимняя</span>
+        </div>
+        <h1 class="category-title">СПЕЦОДЕЖДА ЗИМНЯЯ</h1>
+        <div class="filters">
+          <button class="filters__button">Спецодежда с нанесением</button>
+          <button class="filters__button">Костюмы женские</button>
+          <button class="filters__button filters__button--active">
+            Костюмы мужские
+          </button>
+          <button class="filters__button">Костюмы сварщика</button>
+          <button class="filters__button">Жилеты женские</button>
+          <button class="filters__button">Жилеты мужские</button>
+          <button class="filters__button">Жилеты зимние</button>
+          <button class="filters__button">Брюки</button>
+          <button class="filters__button">Куртки женские</button>
+          <button class="filters__button">Куртки мужские</button>
+          <button class="filters__button filters__button--show-more">
+            Показать еще
+          </button>
+        </div>
+      </header>
+
+      <div class="catalog">
+        <!-- Фильтры -->
+        <aside class="catalog__filters">
+          <div class="filter">
+            <h3 class="filter__title">Цена, руб</h3>
+            <div class="filter__range">
+              <input
+                type="range"
+                min="86"
+                max="100000"
+                value="3144"
+                class="filter__range-input"
+              />
+              <div class="filter__range-labels">
+                <span>от 86</span>
+                <span>до 100000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter">
+            <h3 class="filter__title">Вид изделия</h3>
+            <ul class="filter__list">
+              <li>
+                <label><input type="checkbox" /> Брюки</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Жилет</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Костюм</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Куртка</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Полукомбинезон</label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Новые категории фильтров -->
+          <div class="filter">
+            <h3 class="filter__title">Состав</h3>
+            <ul class="filter__list">
+              <li>
+                <label><input type="checkbox" /> Брюки</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Жилет</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Костюм</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Куртка</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Полукомбинезон</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter">
+            <h3 class="filter__title">Ткань/Материал верха</h3>
+            <ul class="filter__list">
+              <li>
+                <label><input type="checkbox" /> Брюки</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Жилет</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Костюм</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Куртка</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Полукомбинезон</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter">
+            <h3 class="filter__title">Утеплитель</h3>
+            <ul class="filter__list">
+              <li>
+                <label><input type="checkbox" /> Брюки</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Жилет</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Костюм</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Куртка</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Полукомбинезон</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter">
+            <h3 class="filter__title">Назначение</h3>
+            <label class="filter__option">
+              <input type="checkbox" name="purpose" value="pants" />
+              Брюки
+            </label>
+            <label class="filter__option">
+              <input type="checkbox" name="purpose" value="jacket" />
+              Жилет
+            </label>
+            <label class="filter__option">
+              <input type="checkbox" name="purpose" value="costume" />
+              Костюм
+            </label>
+          </div>
+
+          <!-- Фильтры: Цвет -->
+          <div class="filter">
+            <h3 class="filter__title">Цвет</h3>
+            <label class="filter__option">
+              <input type="checkbox" name="color" value="turquoise" />
+              Бирюзовый
+            </label>
+            <label class="filter__option">
+              <input type="checkbox" name="color" value="blue" />
+              Васильковый
+            </label>
+            <label class="filter__option">
+              <input type="checkbox" name="color" value="red" />
+              Красный
+            </label>
+            <!-- Добавьте остальные цвета -->
+          </div>
+
+          <!-- Кнопки управления фильтрами -->
+          <div class="filter__actions">
+            <button class="filter__show">Показать (123)</button>
+            <button class="filter__reset">Сбросить</button>
+          </div>
+        </aside>
+        <div class="catalog__main">
+          <!-- Сортировка -->
+          <div class="catalog__sort">
+            <label for="sort-select" class="catalog__sort-label"
+              >Сортировка:</label
+            >
+            <select id="sort-select" class="catalog__sort-select">
+              <option value="default">По умолчанию</option>
+              <option value="popularity">По популярности</option>
+              <option value="price-asc">По возрастанию цены</option>
+              <option value="price-desc">По убыванию цены</option>
+              <option value="new">По новинкам</option>
+              <option value="discount">По скидке</option>
+              <option value="alphabet">По алфавиту</option>
+            </select>
+          </div>
+
+          <!-- Список товаров -->
+          <div class="catalog__products">
+            <div class="product-card">
+              <img
+                src="image/product-image.png"
+                alt="Костюм"
+                class="product-card__image"
+              />
+              <div class="product-card__details">
+                <p class="product-card__art">Арт 1232425</p>
+                <h2 class="product-card__title">
+                  Костюм "СИРИУС-Горка" куртка, брюки (гражданские размеры) КМФ
+                  Мультикам
+                </h2>
+                <p class="product-card__price">
+                  <span class="product-card__price-opt">Опт 3144 Р</span>
+                  <span class="product-card__price-retail">Розница 4235 Р</span>
+                </p>
+                <div class="product-card__actions">
+                  <button class="product-card__cart-button">В корзину</button>
+                  <button class="product-card__wishlist-button">❤</button>
+                </div>
+              </div>
+            </div>
+            <!-- Повторение карточек продуктов -->
+            <!-- ... -->
+          </div>
+          <!-- Кнопка "Показать ещё" -->
+          <button class="catalog__load-more">Показать ещё</button>
+
+          <!-- Пагинация -->
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item pagination__item--active">
+                <a href="#">1</a>
+              </li>
+              <li class="pagination__item"><a href="#">2</a></li>
+              <li class="pagination__item"><a href="#">3</a></li>
+              <li class="pagination__item"><a href="#">4</a></li>
+              <li class="pagination__item"><a href="#">Все</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__contact">
+          <p>+7 (495) 777-2345</p>
+          <a href="#">Заказать звонок</a>
+          <a href="mailto:info@planeta-sirius.ru">info@planeta-sirius.ru</a>
+          <div class="footer__social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">VK</a>
+          </div>
+          <a href="#" class="footer__price-list">Скачать прайс-лист</a>
+        </div>
+
+        <div class="footer__menu">
+          <ul class="footer__menu-list">
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Спецодежда</a></li>
+            <li><a href="#">Средства защиты рук</a></li>
+            <li><a href="#">Активный отдых</a></li>
+            <li><a href="#">Хозтовары и постельные принадлежности</a></li>
+            <li><a href="#">Ликвидация</a></li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li><a href="#">Обувь</a></li>
+            <li><a href="#">Средства индивидуальной защиты</a></li>
+            <li><a href="#">Жилеты на все случаи жизни</a></li>
+            <li><a href="#">Линия Plus</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__newsletter">
+          <p>Подпишитесь на новости и акции и будьте в курсе всего!</p>
+          <form class="footer__form">
+            <input type="email" placeholder="Введите свой e-mail" />
+            <button type="submit">Подписаться</button>
+            <div class="footer__form-agreement">
+              <input type="checkbox" checked />
+              <label
+                >Я даю согласие на обработку персональных данных и соглашаюсь с
+                правилами обработки персональных данных.</label
+              >
+            </div>
+          </form>
+        </div>
+
+        <div class="footer__legal">
+          <p>© 2021 © PLANETA-SIRIUS.RU</p>
+          <p>
+            Все приведенные на сайте информация носят исключительно
+            ознакомительный характер и не является публичной офертой.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
