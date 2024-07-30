@@ -1,48 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuButton = document.querySelector(".header__menu-button");
-  const menu = document.querySelector(".header__menu");
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButton = document.querySelector(".header__filter-button");
+  const filtersContainer = document.querySelector(".filters");
 
-  menuButton.addEventListener("click", function () {
-    menu.classList.toggle("header__menu--open");
+  filterButton.addEventListener("click", () => {
+    filtersContainer.classList.toggle("filters--visible");
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const filterButtons = document.querySelectorAll(".filters__button");
+  const rangeInput = document.querySelector(".filter__range-input");
+  const minLabel = document.querySelector(
+    ".filter__range-labels span:nth-child(1)"
+  );
+  const maxLabel = document.querySelector(
+    ".filter__range-labels span:nth-child(2)"
+  );
 
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      filterButtons.forEach((btn) =>
-        btn.classList.remove("filters__button--active")
-      );
-      this.classList.add("filters__button--active");
+  rangeInput.addEventListener("input", function () {
+    minLabel.textContent = `от ${rangeInput.min}`;
+    maxLabel.textContent = `до ${rangeInput.value}`;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterHeaders = document.querySelectorAll(".filter__header");
+
+  filterHeaders.forEach((header) => {
+    header.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      content.classList.toggle("filter__content--visible");
+      this.classList.toggle("filter__header--expanded");
     });
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const priceRangeInput = document.querySelector(".filter__range-input");
-  const priceLabels = document.querySelectorAll(".filter__range-labels span");
-
-  priceRangeInput.addEventListener("input", function () {
-    priceLabels[0].textContent = `от ${this.min}`;
-    priceLabels[1].textContent = `до ${this.value}`;
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const sortSelect = document.getElementById("sort-select");
-  const productCards = document.querySelectorAll(".product-card");
-
-  sortSelect.addEventListener("change", function () {
-    const sortBy = this.value;
-    sortProducts(sortBy);
-  });
-
-  function sortProducts(criteria) {
-    // Логика сортировки карточек товаров в зависимости от критерия
-    // Это может включать обновление DOM, перестановку элементов и т.д.
-    // Для примера, ниже код лишь имитирует сортировку
-    console.log("Sorting by:", criteria);
-  }
 });
