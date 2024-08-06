@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".filter__close-button");
 
   const toggleFilters = () => {
-    if (window.innerWidth <= 320) {
+    if (window.innerWidth <= 510) {
       filters.classList.toggle("catalog__filters--visible");
     }
   };
